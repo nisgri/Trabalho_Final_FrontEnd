@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../styles/checkout.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Finalizar Compra</h1>
+
+      <div class="pedido">
+        <h3>Resumo do Pedido</h3>
+        <p>Violão Acústico - R$ 499,90</p>
+      </div>
+
+      <form id="checkoutForm">
+        <input type="text" id="nome" placeholder="Nome completo" />
+        <input type="email" id="email" placeholder="Email" />
+        <input type="text" id="endereco" placeholder="Endereço" />
+        <input type="text" id="cep" placeholder="CEP" />
+
+        <select id="pagamento">
+          <option value="">Forma de pagamento</option>
+          <option>Cartão de Crédito</option>
+          <option>Pix</option>
+          <option>Boleto</option>
+        </select>
+
+        <button type="submit">Finalizar compra</button>
+      </form>
+
+      <p id="mensagem"></p>
+    </div>
+
+    <script src="../scripts/checkout.js"></script>
+  </body>
+</html>
