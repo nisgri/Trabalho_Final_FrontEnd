@@ -9,8 +9,9 @@ document
     const confirmarSenha = document.getElementById("confirmarSenha").value;
 
     if (senha !== confirmarSenha) {
+      mensagem.style.color = "red";
       document.getElementById("mensagem").innerHTML =
-        "As senhas não coincidem!";
+        "As senhas não coincidem.";
       return;
     }
 
@@ -26,8 +27,9 @@ document
 
     const existe = usuarios.find((user) => user.email === email);
     if (existe) {
+      mensagem.style.color = "red";
       document.getElementById("mensagem").innerHTML =
-        "Este e-mail já está cadastrado!";
+        "Este e-mail já está cadastrado.";
       return;
     }
 
@@ -35,6 +37,7 @@ document
 
     localStorage.setItem("usuariosCadastrados", JSON.stringify(usuarios));
 
+    mensagem.style.color = "green";
     document.getElementById("mensagem").innerHTML =
       "Cadastro feito com sucesso!";
     setTimeout(() => {
