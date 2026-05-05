@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  font-family: "Google Sans";
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.nav-link {
+  color: #1d1d1f;
+  font-size: 0.85rem;
+  font-weight: 400;
+  transition: opacity 0.1s;
+}
+
+.nav-link:hover {
+  opacity: 0.6;
+  color: #0071e3;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main .container-fluid {
+  min-height: calc(100vh - 50px);
+}
+
+main .imagem {
+  width: 50%;
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: flex-end;
+}
+
+main .imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+main .cadastro {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.formulario {
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.formulario-wrapper {
+  width: 100%;
+  max-width: 500px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-link {
+  text-decoration: none;
+  text-align: center;
+}
+
+.login-link:hover {
+  color: #0056b3;
+}
+
+.botao {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: #0056b3;
+}
+
+#mensagem {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.navbar.navbar-footer {
+  background-color: #f0f2f5 !important;
+  min-height: 50px;
+}
+
+.legal p {
+  font-size: 0.6rem;
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  main {
+    background-image: url("../assets/guitar.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  main .container-fluid {
+    flex-direction: column;
+    min-height: calc(100vh - 50px);
+  }
+
+  main .imagem {
+    display: none !important;
+  }
+
+  main .cadastro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+}
