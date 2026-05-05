@@ -49,44 +49,53 @@
       </nav>
     </header>
     <main>
-      <div class="container d-flex align-items-start justify-content-around">
-        <div class="pedido" id="resumo-pedido">
-          <h3>Resumo do pedido</h3>
-          <!-- Items will be loaded here -->
-        </div>
-        <div class="dados">
-          <h2>Finalizar compra</h2>
-          <form id="checkoutForm">
-            <input type="text" id="nome" placeholder="Nome completo" />
-            <input type="email" id="email" placeholder="E-mail" />
-            <input type="text" id="cep" placeholder="CEP" />
-            <input type="text" id="estado" placeholder="Estado" />
-            <input type="text" id="bairro" placeholder="Bairro" />
-            <input type="text" id="logradouro" placeholder="Logradouro" />
-            <input type="text" id="complemento" placeholder="Complemento" />
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+            <div class="dados">
+              <h2>Finalizar compra</h2>
+              <form id="checkoutForm">
+                <input type="text" id="nome" placeholder="Nome completo" />
+                <input type="email" id="email" placeholder="E-mail" />
+                <input type="text" id="cep" placeholder="CEP" />
+                <input type="text" id="estado" placeholder="Estado" />
+                <input type="text" id="bairro" placeholder="Bairro" />
+                <input type="text" id="logradouro" placeholder="Logradouro" />
+                <input type="text" id="complemento" placeholder="Complemento" />
 
-            <select id="pagamento">
-              <option value="">Forma de pagamento</option>
-              <option>Boleto bancário</option>
-              <option>Cartão de crédito</option>
-              <option>Cartão de débito</option>
-              <option>PIX</option>
-            </select>
+                <select id="pagamento">
+                  <option value="">Forma de pagamento</option>
+                  <option>Boleto bancário</option>
+                  <option>Cartão de crédito</option>
+                  <option>Cartão de débito</option>
+                  <option>PIX</option>
+                </select>
 
-            <button class="botao mt-4" type="submit">Finalizar compra</button>
-          </form>
-          <p id="mensagem"></p>
+                <button class="botao mt-4" type="submit">
+                  Finalizar compra
+                </button>
+              </form>
+              <p id="mensagem"></p>
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="pedido" id="resumo-pedido">
+              <h3>Resumo do pedido</h3>
+              <!-- Items will be loaded here -->
+            </div>
+          </div>
         </div>
       </div>
     </main>
   </body>
   <footer class="rodape">
-    <nav
-        class="navbar navbar-footer border-top"
-      >
+    <nav class="navbar navbar-footer border-top">
       <div class="container d-flex justify-content-center align-items-center">
         <div class="legal">
-            <p>Copyright &copy; 2026 Guitarrão. Todos os direitos reservados. Guitarrão Instrumentos Musicais Ltda.</p>
+          <p>
+            Copyright &copy; 2026 Guitarrão. Todos os direitos reservados.
+            Guitarrão Instrumentos Musicais Ltda.
+          </p>
         </div>
       </div>
     </nav>
