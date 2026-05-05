@@ -1,3 +1,24 @@
+document.addEventListener("DOMContentLoaded", function () {
+  // Load cart from localStorage
+  let carrinho = JSON.parse(localStorage.getItem("meuCarrinho")) || [];
+
+  const resumoDiv = document.getElementById("resumo-pedido");
+
+  if (carrinho.length === 0) {
+    resumoDiv.innerHTML += "<p>Carrinho vazio</p>";
+  } else {
+    carrinho.forEach((item) => {
+      const p = document.createElement("p");
+      p.textContent = `${item.nome} - R$ ${item.preco},00`;
+      resumoDiv.appendChild(p);
+    });
+    const total = carrinho.reduce((sum, item) => sum + item.preco, 0);
+    const pTotal = document.createElement("p");
+    pTotal.innerHTML = `<strong>Total: R$ ${total.toFixed(2).replace(".", ",")}</strong>`;
+    resumoDiv.appendChild(pTotal);
+  }
+});
+
 document
   .getElementById("checkoutForm")
   .addEventListener("submit", async function (event) {
@@ -31,6 +52,9 @@ document
       mensagem.textContent = "Email inválido!";
       return;
     }
+
+    // Clear cart on successful purchase
+    localStorage.removeItem("meuCarrinho");
 
     mensagem.style.color = "green";
     mensagem.textContent = "Compra realizada com sucesso!";
