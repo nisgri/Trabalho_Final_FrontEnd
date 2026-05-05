@@ -1,25 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-family: 'Google Sans';
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.nav-link {
+    color: #1d1d1f;
+    font-size: 0.85rem;
+    font-weight: 400;
+    transition: opacity 0.1s;
+}
+
+.nav-link:hover {
+    opacity: 0.6;
+    color: #0071e3;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
+  padding-top: 100px;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  padding: 40px;
+  flex-direction: column;
+  padding-bottom: 0;
 }
 
-.container {
-  background: white;
-  padding: 20px;
-  width: 350px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+main {
+  flex: 1;
 }
 
-h1 {
+main .container {
+  padding-top: 20px;
+}
+
+main .pedido {
+  background: #eee;
+  padding: 2%;
+  border-radius: 8px;
+}
+
+main .dados {
+  width: 40%;
   text-align: center;
 }
 
-input,
-select {
+h2 {
+  text-align: center;
+}
+
+input, select {
   width: 90%;
   padding: 8px;
   margin: 6px 0;
@@ -27,8 +84,8 @@ select {
   border-radius: 5px;
 }
 
-button {
-  width: 100%;
+.botao {
+  width: 90%;
   padding: 10px;
   background: green;
   color: white;
@@ -37,13 +94,49 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.botao:hover {
   background: darkgreen;
 }
 
-.pedido {
-  background: #eee;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 5px;
+.rodape {
+  width: 100%;
+}
+
+.navbar.navbar-footer {
+    background-color: #f0f2f5 !important;
+    min-height: 50px;
+    padding: 20px 0;
+}
+
+.legal p {
+    font-size: 0.6rem;
+    margin: 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+  main .container-fluid {
+    flex-direction: column;
+    min-height: calc(100vh - 50px);
+  }
+
+  main .pedido {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  main .dados {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }

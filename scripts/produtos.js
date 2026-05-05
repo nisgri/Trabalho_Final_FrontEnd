@@ -1,4 +1,4 @@
-console.log("A pasta js-projeto foi conectada com sucesso!");
+console.log("A pasta scripts foi conectada com sucesso!");
 
 const listaDestaque = [
   {
@@ -89,7 +89,7 @@ listaDestaque.forEach((instrumento) => {
         <div class="card-body text-center">
             <h5 class="card-title">${instrumento.nome}</h5>
             <p class="card-text text-success fw-bold">R$ ${instrumento.preco},00</p>
-            <button class="btn btn-outline-primary w-100">Adicionar Carrinho</button>
+            <button class="btn btn-outline-primary w-100">Adicionar ao carrinho</button>
         </div>
     </div>
 `;
