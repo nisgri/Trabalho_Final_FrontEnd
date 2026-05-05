@@ -49,7 +49,7 @@ document
 
     if (!email.includes("@")) {
       mensagem.style.color = "red";
-      mensagem.textContent = "Email inválido!";
+      mensagem.textContent = "E-mail inválido!";
       return;
     }
 
