@@ -37,8 +37,7 @@ document
 
     document.getElementById("mensagem").innerHTML =
       "Cadastro feito com sucesso!";
-    // Optionally, redirect after a delay
     setTimeout(() => {
       window.location.href = "../pages/login.html";
-    }, 2000);
+    }, 3000);
   });

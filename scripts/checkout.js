@@ -58,6 +58,9 @@ document
 
     mensagem.style.color = "green";
     mensagem.textContent = "Compra realizada com sucesso!";
+    setTimeout(() => {
+      window.location.href = "../index.html";
+    }, 3000);
   });
 
 document
