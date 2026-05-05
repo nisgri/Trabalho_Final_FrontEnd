@@ -111,8 +111,10 @@ listaDestaque.forEach((instrumento) => {
     let carrinho = JSON.parse(localStorage.getItem("meuCarrinho")) || [];
     carrinho.push(instrumento);
     localStorage.setItem("meuCarrinho", JSON.stringify(carrinho));
-    mostrarNotificacao(`${instrumento.nome} foi adicionado ao carrinho!`);
-  }); // Fecha o addEventListener
+    mostrarNotificacao(
+      `🎉 ${instrumento.nome} foi adicionado ao carrinho com sucesso!`,
+    );
+  });
 
   prateleira.appendChild(col); // Adiciona o card na tela
 }); // Fecha o listaDestaque.forEach
