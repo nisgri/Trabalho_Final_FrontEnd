@@ -35,10 +35,14 @@
           <div class="collapse navbar-collapse justify-content-end" id="menu">
             <ul class="navbar-nav gap-4 text-center">
               <li class="nav-item">
+                <<<<<<< HEAD
                 <a href="index.html" class="nav-link">Loja</a>
+                =======
+                <a href="./index.html" class="nav-link">Loja</a>
+                >>>>>>> main
               </li>
               <li class="nav-item">
-                <a href="pages/login.html" class="nav-link">Login</a>
+                <a href="./pages/login.html" class="nav-link">Entrar</a>
               </li>
               <li class="nav-item">
                 <a href="pages/carrinho.html" class="nav-link">Carrinho</a>
@@ -48,39 +52,28 @@
         </div>
       </nav>
     </header>
-
     <main class="container mt-5 pt-5">
       <h2 class="text-center mb-4">Instrumentos em Destaque</h2>
-
       <div id="lista-produtos" class="row"></div>
+      <div class="mt-5"></div>
     </main>
-
-    <footer class="mt-5"></footer>
-
-    <!-- Toast container -->
-    <div class="toast-container position-fixed top-0 end-0 p-3">
-      <div
-        id="cartToast"
-        class="toast"
-        role="alert"
-        aria-live="assertive"
-        aria-atomic="true"
-      >
-        <div class="toast-header">
-          <strong class="me-auto">Carrinho</strong>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="toast"
-            aria-label="Close"
-          ></button>
+    <footer class="rodape">
+      <nav class="navbar navbar-footer border-top fixed-bottom">
+        <div class="container d-flex justify-content-center align-items-center">
+          <div class="legal">
+            <p>
+              Copyright &copy; 2026 Guitarrão. Todos os direitos reservados.
+              Guitarrão Instrumentos Musicais Ltda.
+            </p>
+          </div>
         </div>
-        <div class="toast-body" id="toastMessage">Produto adicionado!</div>
-      </div>
-    </div>
-
-    <script src="./js-projeto/produtos.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      </nav>
+    </footer>
   </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./scripts/produtos.js"></script>
 </html>
