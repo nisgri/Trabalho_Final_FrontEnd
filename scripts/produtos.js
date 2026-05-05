@@ -1,5 +1,17 @@
 console.log("A pasta scripts foi conectada com sucesso!");
 
+// Função para exibir notificação bonita
+function mostrarNotificacao(mensagem) {
+  const notificacao = document.createElement("div");
+  notificacao.className = "notificacao-toast";
+  notificacao.textContent = mensagem;
+  document.body.appendChild(notificacao);
+
+  setTimeout(() => {
+    notificacao.remove();
+  }, 3000);
+}
+
 const listaDestaque = [
   {
     nome: "Violão",
@@ -99,7 +111,7 @@ listaDestaque.forEach((instrumento) => {
     let carrinho = JSON.parse(localStorage.getItem("meuCarrinho")) || [];
     carrinho.push(instrumento);
     localStorage.setItem("meuCarrinho", JSON.stringify(carrinho));
-    alert(`${instrumento.nome} foi adicionado ao carrinho!`);
+    mostrarNotificacao(`${instrumento.nome} foi adicionado ao carrinho!`);
   }); // Fecha o addEventListener
 
   prateleira.appendChild(col); // Adiciona o card na tela
