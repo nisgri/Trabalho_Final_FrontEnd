@@ -32,7 +32,7 @@ form.addEventListener("submit", function(event) {
         mensagem.style.color = "green";
 
         setTimeout(() => {
-        window.location.href = "../pages/index.html";
+        window.location.href = "../index.html";
         }, 3000);
 
     } else {
