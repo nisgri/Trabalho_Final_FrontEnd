@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     carrinho.forEach((item) => {
       const p = document.createElement("p");
-      p.textContent = `${item.nome} - R$ ${item.preco},00`;
+      p.textContent = `${item.quantidade}x ${item.nome} - R$ ${item.preco *= item.quantidade},00`;
       resumoDiv.appendChild(p);
     });
     const total = carrinho.reduce((sum, item) => sum + item.preco, 0);
