@@ -33,7 +33,7 @@ html {
 
 .nav-link:hover {
   opacity: 0.6;
-  color: #0071e3;
+  color: #d53406;
 }
 
 .navbar-toggler {
@@ -94,6 +94,19 @@ h2 {
   color: #333;
 }
 
+a {
+  text-decoration: none;
+  color: #d53406;
+}
+
+.guitarrao {
+  font-weight: bold;
+}
+
+.login-link:hover {
+  color: #99320c;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -110,19 +123,10 @@ input {
   border-radius: 5px;
 }
 
-.login-link {
-  text-decoration: none;
-  text-align: center;
-}
-
-.login-link:hover {
-  color: #0056b3;
-}
-
 .botao {
   margin-top: 20px;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #d53406;
   color: white;
   border: none;
   border-radius: 5px;
@@ -130,7 +134,7 @@ input {
 }
 
 .botao:hover {
-  background-color: #0056b3;
+  background-color: #99320c;
 }
 
 #mensagem {
@@ -173,5 +177,13 @@ input {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  main .cadastro .login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
