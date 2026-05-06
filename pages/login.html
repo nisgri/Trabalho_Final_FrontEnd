@@ -51,7 +51,7 @@
     <main>
         <div class="container-fluid p-0 d-flex justify-content-center align-items-center">
             <div class="login">
-                <h2>Iniciar sessão na Guitarrão</h2>
+                <h2>Iniciar sessão na <a class="guitarrao">Guitarrão</a></h2>
                 <div class="formulario">
                     <form id="formLogin">
                         <label>E-mail</label>
@@ -65,7 +65,10 @@
                         </button>
     
                         <p id="mensagem"></p>
-                        <p>Não tem uma conta Guitarrão? <a href="../pages/cadastro.html" class="cadastro">Crie uma agora mesmo.</a></p>
+                        <p class="cadastro">
+                          Ainda não tem uma conta?
+                          <a href="../pages/cadastro.html" class="cadastro-link">Crie uma.</a>
+                        </p>
                     </form>
                 </div>
             </div>
@@ -78,16 +81,17 @@
     <footer></footer>
   </body>
   <footer class="rodape">
-    <nav
-        class="navbar navbar-footer border-top fixed-bottom"
-      >
-      <div class="container d-flex justify-content-center align-items-center">
-        <div class="legal">
-            <p>Copyright &copy; 2026 Guitarrão. Todos os direitos reservados. Guitarrão Instrumentos Musicais Ltda.</p>
+      <nav class="navbar navbar-footer border-top">
+        <div class="container d-flex justify-content-center align-items-center">
+          <div class="legal">
+            <p>
+              Copyright &copy; 2026 Guitarrão. Todos os direitos reservados.
+              Guitarrão Instrumentos Musicais Ltda.
+            </p>
+          </div>
         </div>
-      </div>
-    </nav>
-  </footer>
+      </nav>
+    </footer>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

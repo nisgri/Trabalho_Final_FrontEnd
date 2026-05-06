@@ -33,7 +33,7 @@ html {
 
 .nav-link:hover {
   opacity: 0.6;
-  color: #0071e3;
+  color: #d53406;
 }
 
 .navbar-toggler {
@@ -73,7 +73,7 @@ main {
 
 .rodape {
   width: 100%;
-  padding-top: 100px;
+  padding-top: 40px;
 }
 
 .navbar.navbar-footer {
@@ -94,7 +94,8 @@ main {
   right: 20px;
   max-width: 320px;
   padding: 16px 18px;
-  background: rgba(0, 123, 255, 0.95);
+  background: rgba(213, 52, 6, 0.8);
+  backdrop-filter: blur(10px);
   color: #fff;
   border-radius: 16px;
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
@@ -103,6 +104,17 @@ main {
   line-height: 1.4;
   z-index: 9999;
   animation: toast-in 0.25s ease-out;
+}
+
+.btn-outline-primary {
+  border-color: #d53406;
+  color: #d53406;
+}
+
+.btn-outline-primary:hover {
+  border-color: #d53406;
+  color: #fff;
+  background-color: #d53406;
 }
 
 @keyframes toast-in {

@@ -33,7 +33,7 @@ html {
 
 .nav-link:hover {
   opacity: 0.6;
-  color: #0071e3;
+  color: #d53406;
 }
 
 .navbar-toggler {
@@ -88,4 +88,18 @@ main {
   margin-right: 10px;
   width: 60px;
   margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+    .w-100-mobile {
+        width: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .w-100-mobile {
+        width: 100% !important;
+        display: flex;
+        justify-content: space-between; /* Esquerda e Direita */
+    }
 }

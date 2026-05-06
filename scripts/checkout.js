@@ -43,13 +43,13 @@ document
       logradouro == ""
     ) {
       mensagem.style.color = "red";
-      mensagem.textContent = "Preencha todos os campos!";
+      mensagem.textContent = "Preencha todos os campos.";
       return;
     }
 
     if (!email.includes("@")) {
       mensagem.style.color = "red";
-      mensagem.textContent = "E-mail inválido!";
+      mensagem.textContent = "E-mail inválido.";
       return;
     }
 

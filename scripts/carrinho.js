@@ -38,7 +38,7 @@ function renderCarrinho() {
     const itemDiv = document.createElement("div");
     itemDiv.className = "card mb-3";
     itemDiv.innerHTML = `
-            <div class="card-body d-flex justify-content-between align-items-center">
+            <div class="card-body d-flex justify-content-between align-items-center flex-wrap gap-3">
                 <div class="d-flex align-items-center">
                     <img src="${item.imagem}" alt="${item.nome}" style="width: 50px; height: 50px; object-fit: contain; margin-right: 10px;">
                     <div>
@@ -49,12 +49,16 @@ function renderCarrinho() {
                         </p>
                     </div>
                 </div>
-                <div class="d-flex align-items-center gap-1">
-                  <button class="btn btn-sm btn-secondary ms-2 btn-diminuir" data-index="${index}">-</button>
-                  <span class="fw-bold">${item.quantidade}</span>
-                  <button class="btn btn-sm btn-secondary ms-2 btn-aumentar" data-index="${index}">+</button>
-                  <button class="btn btn-danger btn-remove ms-3" data-index="${index}">Remover</button>
-                </div>
+                <div class="d-flex align-items-center justify-content-between w-100-mobile gap-2">
+                  <div class="d-flex align-items-center bg-light border rounded-pill px-2">
+                      <button class="btn btn-sm btn-link text-dark p-1 btn-diminuir" data-index="${index}" style="text-decoration: none;">-</button>
+                      <span class="mx-2 fw-bold" style="min-width: 20px; text-align: center;">${item.quantidade}</span>
+                      <button class="btn btn-sm btn-link text-dark p-1 btn-aumentar" data-index="${index}" style="text-decoration: none;">+</button>
+                  </div>
+                  <button class="btn btn-sm btn-outline-danger btn-remove px-3" data-index="${index}">
+                      Remover
+                  </button>
+              </div>
             </div>
         `;
 
@@ -94,7 +98,7 @@ function renderCarrinho() {
 // Handle checkout
 document.getElementById("btn-checkout").addEventListener("click", () => {
   if (carrinho.length === 0) {
-    alert("Carrinho vazio!");
+    alert("Carrinho vazio.");
     return;
   }
   // Redirect to checkout page

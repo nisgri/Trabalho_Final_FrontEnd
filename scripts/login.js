@@ -17,7 +17,7 @@ form.addEventListener("submit", function(event) {
     // VALIDAR CAMPOS VAZIOS
     if (email === "" || senha === "") {
 
-        mensagem.innerHTML = "Preencha todos os campos";
+        mensagem.innerHTML = "Preencha todos os campos.";
 
         mensagem.style.color = "red";
 
@@ -31,9 +31,13 @@ form.addEventListener("submit", function(event) {
 
         mensagem.style.color = "green";
 
+        setTimeout(() => {
+        window.location.href = "../pages/index.html";
+        }, 3000);
+
     } else {
 
-        mensagem.innerHTML = "Email ou senha inválidos";
+        mensagem.innerHTML = "Email ou senha inválidos.";
 
         mensagem.style.color = "red";
     }
